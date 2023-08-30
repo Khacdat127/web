@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Document</title>
+  <link href="dangky.css" rel="stylesheet">
+  <link href="/index.css" rel="stylesheet">
+
+  <script type="text/javascript" src="dangky.js" charset="utf-8" defer></script>
+
+</head>
+
+<body>
+
+  <div id="navbar">
+    <a href="/index.html"><img src="/img/logo_vna.webp" /></a>
+    <div id="navbar-content">
+      <a href="/Sưu tập ảnh/bosuutapanh.html">Image collection</a>
+      <a href="/Bán Hàng/banhang.html">Booking</a>
+      <a href="#">Register</a>
+    </div>
+  </div>
+  <div class="line"></div>
+  <div class="container">
+    <form id="form" class="form">
+      <h2>Register</h2>
+      <div class="form-control">
+        <label for="username">User name</label>
+        <input type="text" id="username" placeholder="Enter Username">
+        <small>Error Message</small>
+      </div>
+      <div class="form-control">
+        <label for="email">Email</label>
+        <input type="text" id="email" placeholder="Enter email">
+        <small>Error Message</small>
+      </div>
+      <div class="form-control" style="margin:0">
+        <label for="gender">Gender</label>
+        <div class="gender" >
+          <div style="display: flex;padding-top: 10px">
+            <span>Male</span>
+            <input type="radio" name="gender" value="male" id="gender1">
+            <span>Female</span>
+            <input type="radio" name="gender" value="female" id="gender2">
+            <small>Error Message</small>
+          </div>
+        </div>
+      </div>
+      <div class="form-control">
+        <label for="phone">Phone</label>
+        <input type="text" id="phone" placeholder="Enter phone">
+        <small>Error Message</small>
+      </div>
+      <div class="form-control">
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Enter password">
+        <small>Error Message</small>
+      </div>
+      <div class="form-control">
+        <label for="password2">Confirm Password</label>
+        <input type="password" id="password2" placeholder="Enter password again">
+        <small>Error Message</small>
+      </div>
+      <div class="form-control">
+        <label for="note">Note</label>
+        <textarea style="width: 100%;" mame="note" id="note" placeholder=""></textarea>
+        <small>Error Message</small>
+      </div>
+      <button>Submit</button>
+    </form>
+  </div>
+</body>
+
+</html>

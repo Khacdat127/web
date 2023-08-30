@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Document</title>
+  <link href="banhang.css" rel="stylesheet">
+  <link href="/index.css" rel="stylesheet">
+</head>
+
+<body>
+  <div id="navbar">
+    <a href="/index.html"><img src="/img/logo_vna.webp" /></a>
+    <div id="navbar-content">
+      <a href="/Sưu tập ảnh/bosuutapanh.html">Image collection</a>
+      <a href="#">Booking</a>
+      <a href="/Đăng ký/dangky.html">Register</a>
+    </div>
+  </div>
+  <div class="line">
+
+  <div class="panel">
+
+    <h2>Bán Hàng</h2>
+    <div>
+      <select onchange="handleSelectChange(event)" id="price-range">
+        <option value="" selected>Chọn mức giá</option>
+        <option value="3000000">0 - 3.000.000</option>
+        <option value="5000000">3.000.000 - 5.000.000</option>
+        <option value="20000000">5.000.000 - 20.000.000</option>
+        <!-- <option value="1500-2000">1000 - 1999</option>
+        <option value="2000-2500">2000 - ---</option> -->
+      </select>
+      <div id="product-rows"></div>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>Tích chọn</th>
+          <th>Hàng hóa</th>
+          <th>Đơn giá</th>
+          <th>Số lượng</th>
+          <th>Thành tiền</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="product">
+          <td><input type="checkbox" onchange="handleCheckboxChange(0)"></td>
+          <td> Hồ Chí Minh - BangKok</td>
+          <td>3000000 VNĐ </td>
+          <td><input type="number" class="quantity" min="1" disabled onchange="calculateProductTotal(0)"></td>
+          <td class="total-price"></td>
+        </tr>
+        <tr class="product">
+          <td><input type="checkbox" onchange="handleCheckboxChange(1)"></td>
+          <td> Hồ Chí Minh - Seoul</td>
+          <td>5000000 VNĐ </td>
+          <td><input type="number" class="quantity" min="1" disabled onchange="calculateProductTotal(1)"></td>
+          <td class="total-price"></td>
+        </tr>
+        <tr class="product">
+          <td><input type="checkbox" onchange="handleCheckboxChange(2)"></td>
+          <td>Hồ Chí Minh - Hà Nội</td>
+          <td>1500000 VNĐ</td>
+          <td><input type="number" class="quantity" min="1" disabled onchange="calculateProductTotal(2)"></td>
+          <td class="total-price"></td>
+        </tr>
+        <tr class="product">
+          <td><input type="checkbox" onchange="handleCheckboxChange(3)"></td>
+          <td>Hồ Chí Minh - HongKong </td>
+          <td>4000000 VNĐ</td>
+          <td><input type="number" class="quantity" min="1" disabled onchange="calculateProductTotal(3)"></td>
+          <td class="total-price"></td>
+        </tr>
+        <tr class="product">
+          <td><input type="checkbox" onchange="handleCheckboxChange(4)"></td>
+          <td> Hồ Chí Minh - Las Vegas</td>
+          <td>20000000 VNĐ</td>
+          <td><input type="number" class="quantity" min="1" disabled onchange="calculateProductTotal(4)"></td>
+          <td class="total-price"></td>
+        </tr>
+        <tr class="product">
+          <td><input type="checkbox" onchange="handleCheckboxChange(5)"></td>
+          <td> Hồ Chí Minh - London</td>
+          <td> 15000000 VNĐ</td>
+          <td><input type="number" class="quantity" min="1" disabled onchange="calculateProductTotal(5)"></td>
+          <td class="total-price"></td>
+        </tr>
+      <tfoot>
+        <tr>
+          <td colspan="4">Tổng tiền</td>
+          <td id="total-price">0</td>
+        </tr>
+      </tfoot>
+      </tbody>
+    </table>
+  </div>
+</body>
+<script src="banhang.js"></script>
+
+</html>
